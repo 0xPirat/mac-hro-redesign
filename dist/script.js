@@ -147,7 +147,7 @@ form.addEventListener("submit", (event) => {
   const data = new FormData(form);
   const subject = encodeURIComponent(`Anfrage: ${data.get("thema")}`);
   const body = encodeURIComponent(
-    `Moin Christof,\n\n${data.get("nachricht")}\n\nViele Grüße\n${data.get("vorname")} ${data.get("nachname")}\n${data.get("email")}`
+    `Sehr geehrter Herr Lippmann,\n\n${data.get("nachricht")}\n\nMit freundlichen Grüßen\n${data.get("vorname")} ${data.get("nachname")}\n${data.get("email")}`
   );
   window.location.href = `mailto:info@mac-hro.de?subject=${subject}&body=${body}`;
 });

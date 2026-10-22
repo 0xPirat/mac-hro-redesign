@@ -5,7 +5,7 @@ window.MAC_HRO_CONTENT = {
       id: "support",
       label: "Apple-Service",
       kicker: "Einrichten · Optimieren · Absichern",
-      title: "Damit dein System einfach funktioniert.",
+      title: "Damit Ihr System einfach funktioniert.",
       intro: "Mac-HRO übernimmt die technische Einrichtung, Wartung und Problemlösung für einzelne Geräte ebenso wie für komplette Unternehmensumgebungen.",
       groups: [
         { title: "System & Daten", items: ["macOS-Ersteinrichtung inklusive Datenmigration und Einweisung", "Neuinstallation, System-Konfiguration, Pflege und Updates", "Datensicherung, Time Machine, startfähige Backups und Datenrettung", "Aufrüstung von Festplatte, Arbeitsspeicher und weiterer Hardware"] },
@@ -18,7 +18,7 @@ window.MAC_HRO_CONTENT = {
       label: "Mac-Beratung",
       kicker: "Passende Technik statt Fehlkauf",
       title: "Gemeinsam zur richtigen Apple-Lösung.",
-      intro: "Vom einzelnen Mac bis zur Netzwerk- und Serverumgebung: Die Beratung beginnt bei deinen Aufgaben und endet mit einer sinnvoll abgestimmten Lösung.",
+      intro: "Vom einzelnen Mac bis zur Netzwerk- und Serverumgebung: Die Beratung beginnt bei Ihren Aufgaben und endet mit einer sinnvoll abgestimmten Lösung.",
       groups: [
         { title: "Bedarf klären", items: ["iMac, MacBook, MacBook Pro oder iPad passend zum Einsatz auswählen", "Prüfen, ob sich eine Investition in bestehende Macs noch lohnt", "Benötigte Peripherie und Software vor dem Einkauf bestimmen"] },
         { title: "Umsetzung", items: ["Persönliches Angebot und Einkauf über Mac-HRO oder den Webshop", "Ersteinrichtung und Übertragung der Daten vom alten Rechner", "Planung komplexerer Apple-, Server- und Netzwerkumgebungen"] },
@@ -30,7 +30,7 @@ window.MAC_HRO_CONTENT = {
       label: "Mac-Training",
       kicker: "Persönlich · Verständlich · Im eigenen Tempo",
       title: "Lernen direkt am eigenen Gerät.",
-      intro: "Training zu Hause oder im Unternehmen — anhand deiner Fragen, in vertrauter Umgebung und passend zu deinem Terminkalender.",
+      intro: "Training zu Hause oder im Unternehmen — anhand Ihrer Fragen, in vertrauter Umgebung und passend zu Ihrem Terminkalender.",
       groups: [
         { title: "Themen", items: ["macOS-Grundlagen", "iOS-Grundlagen", "Wunsch-Training zu individuellen Fragen", "iCloud, Apps, externe Geräte und Backups"] },
         { title: "Voraussetzungen", items: ["Eigener Mac oder eigenes iOS-Gerät", "Bei Bedarf bringt Mac-HRO ein zweites Gerät zum Ausprobieren mit", "Für einige Inhalte ist Internetzugang nötig", "Für iCloud-Einrichtung werden die eigenen Zugangsdaten benötigt"] },
@@ -41,11 +41,11 @@ window.MAC_HRO_CONTENT = {
       id: "remote",
       label: "Fernwartung",
       kicker: "Schnell und ohne Anfahrt",
-      title: "Direkte Hilfe auf deinem Bildschirm.",
+      title: "Direkte Hilfe auf Ihrem Bildschirm.",
       intro: "Für kurzfristige Probleme rund um Mac oder iOS-Gerät nutzt Mac-HRO eine sichere, zeitlich begrenzte TeamViewer-Verbindung.",
       groups: [
         { title: "So funktioniert es", items: ["Termin per E-Mail an info@mac-hro.de oder telefonisch vereinbaren", "Aktuelle TeamViewer-Client-Version herunterladen und installieren", "Neunstellige ID und kurzzeitig gültiges Kennwort telefonisch mitteilen", "Nach der Sitzung ist ohne neues Kennwort kein Zugriff möglich"] },
-        { title: "Voraussetzungen", items: ["Stabile Internetverbindung", "Aktuelle TeamViewer-Software", "Du bleibst während der Hilfe am Gerät"] },
+        { title: "Voraussetzungen", items: ["Stabile Internetverbindung", "Aktuelle TeamViewer-Software", "Sie bleiben während der Hilfe am Gerät"] },
         { title: "Konditionen", items: ["60 € pro Stunde zzgl. 19 % MwSt.", "Minutengenaue Abrechnung", "Laut Bestandsseite Montag bis Sonntag von 09:00 bis 22:00 Uhr"] }
       ]
     },
