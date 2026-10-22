@@ -7,10 +7,12 @@
     <meta name="theme-color" content="#081a26" />
     <title>Mac-HRO — Apple Support & Training in Rostock</title>
     <link rel="stylesheet" href="styles.css" />
+    <script src="content.js" defer></script>
     <script src="script.js" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Zum Inhalt springen</a>
+    <div class="scroll-progress" aria-hidden="true"><span></span></div>
 
     <header class="site-header" data-header>
       <div class="shell nav-wrap">
@@ -26,6 +28,7 @@
         <nav class="main-nav" id="main-nav" aria-label="Hauptnavigation">
           <a href="#leistungen">Leistungen</a>
           <a href="#ablauf">So läuft’s</a>
+          <a href="#preise">Preise</a>
           <a href="#ueber-mich">Über mich</a>
           <a class="nav-phone" href="tel:+4938137598811">0381 375 988 11</a>
           <a class="button button-small" href="#kontakt">Termin anfragen</a>
@@ -37,8 +40,10 @@
       <section class="hero" id="top" aria-labelledby="hero-title">
         <div class="hero-image" role="img" aria-label="Persönliche Beratung an einem Mac mit Blick auf den Rostocker Hafen"></div>
         <div class="hero-shade"></div>
+        <div class="hero-orbit orbit-a" aria-hidden="true"></div>
+        <div class="hero-orbit orbit-b" aria-hidden="true"></div>
         <div class="shell hero-content">
-          <p class="eyebrow light"><span></span> Dein Apple-Partner in Rostock</p>
+          <p class="eyebrow light"><span></span> Dein Partner für <strong class="word-cycle" aria-live="polite">Mac-Support</strong></p>
           <h1 id="hero-title">Dein Mac soll helfen.<br /><em>Nicht aufhalten.</em></h1>
           <p class="hero-lead">Persönliche Beratung, zuverlässiger Support und verständliches Training — bei dir vor Ort oder direkt per Fernwartung.</p>
           <div class="hero-actions">
@@ -57,6 +62,13 @@
           <span aria-hidden="true">↗</span>
         </a>
       </section>
+
+      <div class="service-marquee" aria-label="Leistungsübersicht">
+        <div class="marquee-track">
+          <span>Mac-Beratung</span><i>✦</i><span>Apple-Produkte</span><i>✦</i><span>Mac-Training</span><i>✦</i><span>Fernwartung</span><i>✦</i><span>Apple-Service</span><i>✦</i><span>Leih-Mac</span><i>✦</i><span>Sonos</span><i>✦</i><span>Netzwerk & NAS</span><i>✦</i>
+          <span aria-hidden="true">Mac-Beratung</span><i aria-hidden="true">✦</i><span aria-hidden="true">Apple-Produkte</span><i aria-hidden="true">✦</i><span aria-hidden="true">Mac-Training</span><i aria-hidden="true">✦</i><span aria-hidden="true">Fernwartung</span><i aria-hidden="true">✦</i><span aria-hidden="true">Apple-Service</span><i aria-hidden="true">✦</i><span aria-hidden="true">Leih-Mac</span><i aria-hidden="true">✦</i><span aria-hidden="true">Sonos</span><i aria-hidden="true">✦</i><span aria-hidden="true">Netzwerk & NAS</span><i aria-hidden="true">✦</i>
+        </div>
+      </div>
 
       <section class="intro section" aria-labelledby="intro-title">
         <div class="shell intro-grid">
@@ -135,6 +147,22 @@
         </div>
       </section>
 
+      <section class="service-explorer section" id="service-kompass" aria-labelledby="explorer-title">
+        <div class="shell">
+          <div class="section-head reveal">
+            <div>
+              <p class="eyebrow light"><span></span> Der komplette Überblick</p>
+              <h2 id="explorer-title">Service-Kompass</h2>
+            </div>
+            <p>Wähle ein Thema und entdecke alle Leistungen und Informationen der bisherigen Mac-HRO-Website in einer klaren Ansicht.</p>
+          </div>
+          <div class="explorer-shell reveal">
+            <div class="explorer-tabs" role="tablist" aria-label="Leistungsbereiche" id="service-tabs"></div>
+            <article class="explorer-panel" id="service-panel" role="tabpanel" tabindex="0"></article>
+          </div>
+        </div>
+      </section>
+
       <section class="process section" id="ablauf" aria-labelledby="process-title">
         <div class="shell process-grid">
           <div class="process-title-block">
@@ -161,6 +189,43 @@
         </div>
       </section>
 
+      <section class="prices section" id="preise" aria-labelledby="prices-title">
+        <div class="shell">
+          <div class="section-head reveal">
+            <div>
+              <p class="eyebrow"><span></span> Transparent kalkuliert</p>
+              <h2 id="prices-title">Preise & Konditionen</h2>
+            </div>
+            <p>Die Preisangaben stammen aus dem bisherigen Webauftritt und sollten vor einer öffentlichen Übernahme noch einmal bestätigt werden.</p>
+          </div>
+
+          <div class="price-grid reveal">
+            <article class="price-card"><span>Mac-Training</span><strong>89 €</strong><p>pro Stunde, zzgl. 19 % MwSt.</p></article>
+            <article class="price-card accent"><span>Mac-Service</span><strong>89 €</strong><p>pro Stunde, zzgl. 19 % MwSt.</p></article>
+            <article class="price-card"><span>Fernwartung</span><strong>60 €</strong><p>pro Stunde, zzgl. 19 % MwSt. · minutengenaue Abrechnung · Mo–So, 09–22 Uhr</p></article>
+          </div>
+
+          <div class="price-details reveal">
+            <details open>
+              <summary><span>Anfahrt</span><strong>Innerhalb Rostocks kostenfrei</strong></summary>
+              <div class="detail-body"><p>Bis 20 km: 15 € · bis 50 km: 35 € · über 50 km: 0,80 € pro Kilometer. Alle Angaben zzgl. 19 % MwSt.</p></div>
+            </details>
+            <details>
+              <summary><span>Datenrettung & Versicherung</span><strong>Weitere Konditionen</strong></summary>
+              <div class="detail-body"><p>Erfolgreiche Datenwiederherstellung für Festplatten bis 2 TB: 399 €. Hardware-Versicherung ab 8 € monatlich; laut Bestandsseite inklusive selbst verschuldeter Schäden und Wasserschäden.</p></div>
+            </details>
+            <details>
+              <summary><span>Historische Reparaturpreise</span><strong>Vor Veröffentlichung prüfen</strong></summary>
+              <div class="detail-body"><p>Auf der bisherigen Website sind noch Preise für ältere iPhone-Modelle aufgeführt: iPhone 5/5C/5S/SE je 99 €, iPhone 6 119 €, 6 Plus 139 €, 6S 129 €, 6S Plus und iPhone 7 je 149 €, Akkuwechsel 79 €. Diese Angaben sind sichtbar als Altbestand gekennzeichnet.</p></div>
+            </details>
+            <details>
+              <summary><span>Apple-Hardware</span><strong>Individuelles Angebot</strong></summary>
+              <div class="detail-body"><p>Apple-Produkte werden telefonisch, per E-Mail oder über den Webshop angeboten. Auf Wunsch inklusive persönlichem Angebot, Lieferung und Einrichtung.</p><a class="text-link" href="https://rocomtech.de/">Zum Webshop <span>↗</span></a></div>
+            </details>
+          </div>
+        </div>
+      </section>
+
       <section class="about section" id="ueber-mich" aria-labelledby="about-title">
         <div class="shell about-grid">
           <div class="about-visual" aria-hidden="true">
@@ -179,6 +244,20 @@
             </div>
           </div>
         </div>
+        <div class="shell about-more reveal">
+          <article><span>01</span><h3>Vom Handwerk zum Design</h3><p>Gelernter Zimmerermeister, seit 2005 im Kommunikationsdesign tätig — mit einem Blick für praktische Lösungen und klare Gestaltung.</p></article>
+          <article><span>02</span><h3>Fotografie & Rostock</h3><p>Architektur- und Wassersportfotografie auf Warnow und Ostsee, unter anderem rund um Warnemünder Woche und Hanse Sail. Dazu gehören auch der Kalender „800 Jahre Hansestadt Rostock“ und das Buch „Rostocker Stadtlandschaften“.</p></article>
+          <article><span>03</span><h3>Partner & Ausstattung</h3><p>Neben Apple auch Ansprechpartner für Sonos, DJI, Hasselblad, Adobe und Schulausstattung im Rahmen von Digitalpakt und Sofortausstattung.</p></article>
+        </div>
+      </section>
+
+      <section class="clients section" aria-labelledby="clients-title">
+        <div class="shell clients-head reveal">
+          <p class="eyebrow light"><span></span> Referenzen der bisherigen Website</p>
+          <h2 id="clients-title">Vertrauen aus der Region</h2>
+          <p>Vom Hotel bis zum Handwerksbetrieb, von der Kanzlei bis zur Kreativagentur.</p>
+        </div>
+        <div class="client-cloud shell reveal" id="client-cloud"></div>
       </section>
 
       <section class="contact section" id="kontakt" aria-labelledby="contact-title">
@@ -220,7 +299,7 @@
           <span class="brand-copy"><strong>Mac-HRO</strong><small>Apple Support · Rostock</small></span>
         </a>
         <p>Persönliche Apple-Beratung, Mac-Support und Mac-Training für Rostock und Umgebung.</p>
-        <div class="footer-links"><a href="https://mac-hro.de/impressum/">Impressum</a><a href="https://mac-hro.de/datenschutz/">Datenschutz</a><a href="https://rocomtech.de/">Webshop ↗</a></div>
+        <div class="footer-links"><a href="https://mac-hro.de/impressum/">Impressum</a><a href="https://mac-hro.de/datenschutz/">Datenschutz</a><a href="https://mac-hro.de/agb/">AGB</a><a href="https://mac-hro.de/widerrufsbelehrung/">Widerruf</a><a href="https://rocomtech.de/">Webshop ↗</a></div>
       </div>
       <div class="shell footer-bottom"><span>© <span id="year"></span> Mac-HRO</span><span>Konzept-Redesign · Nicht die Live-Website</span></div>
     </footer>
