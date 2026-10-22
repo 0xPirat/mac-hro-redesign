@@ -5,12 +5,18 @@ const progress = document.querySelector(".scroll-progress span");
 const menuButton = document.querySelector(".menu-toggle");
 const menu = document.querySelector(".main-nav");
 const form = document.querySelector("#contact-form");
+const storyFrames = document.querySelectorAll(".story-frame");
 const { services, clients, rotatingWords } = window.MAC_HRO_CONTENT;
 
 const updateScrollUI = () => {
   header.classList.toggle("scrolled", window.scrollY > 24);
   const total = document.documentElement.scrollHeight - window.innerHeight;
   progress.style.transform = `scaleX(${total > 0 ? window.scrollY / total : 0})`;
+  storyFrames.forEach((frame) => {
+    const rect = frame.getBoundingClientRect();
+    const shift = Math.max(-24, Math.min(24, (rect.top - window.innerHeight / 2) * -0.035));
+    frame.style.setProperty("--story-shift", `${shift}px`);
+  });
 };
 updateScrollUI();
 window.addEventListener("scroll", updateScrollUI, { passive: true });
@@ -110,7 +116,31 @@ if (!prefersReducedMotion.matches && window.matchMedia("(pointer: fine)").matche
     document.documentElement.style.setProperty("--pointer-x", `${x * 24}px`);
     document.documentElement.style.setProperty("--pointer-y", `${y * 24}px`);
   });
+
+  document.querySelectorAll("[data-tilt]").forEach((card) => {
+    card.addEventListener("pointermove", (event) => {
+      const bounds = card.getBoundingClientRect();
+      const x = (event.clientX - bounds.left) / bounds.width - 0.5;
+      const y = (event.clientY - bounds.top) / bounds.height - 0.5;
+      card.style.setProperty("--tilt-x", `${y * -4}deg`);
+      card.style.setProperty("--tilt-y", `${x * 5}deg`);
+    });
+    card.addEventListener("pointerleave", () => {
+      card.style.setProperty("--tilt-x", "0deg");
+      card.style.setProperty("--tilt-y", "0deg");
+    });
+  });
 }
+
+const sectionObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) return;
+    menu.querySelectorAll('a[href^="#"]').forEach((link) => {
+      link.classList.toggle("current", link.getAttribute("href") === `#${entry.target.id}`);
+    });
+  });
+}, { rootMargin: "-35% 0px -55%", threshold: 0 });
+document.querySelectorAll("main section[id]").forEach((section) => sectionObserver.observe(section));
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
